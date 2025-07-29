@@ -18,7 +18,7 @@ def inicializar_arquivos():
         pd.DataFrame(columns=['Data', 'Turno', 'Operador', 'Máquina', 'Código',
                               'ML', 'Cor', 'Gr', 'Quantidade', 'Tipo']).to_csv(ENTRADA_CSV, index=False)
     if not os.path.exists(SAIDA_CSV):
-        pd.DataFrame(columns=['Data', 'Operador', 'Código', 'ML', 'Retirada',
+        pd.DataFrame(columns=['Data', 'Operador', 'Código', 'ML', 'Produção',
                               'Perdas', 'Quarentena']).to_csv(SAIDA_CSV, index=False)
 
 inicializar_arquivos()
@@ -96,7 +96,7 @@ elif menu == "Registrar Saída":
         operador = st.text_input("Operador")
         codigo = st.text_input("Código")
         ml = st.text_input("ML")
-        producao = st.number_input("Produção", min_value=0)
+        producao = st.number_input("Retirada", min_value=0)
         perdas = st.number_input("Perdas", min_value=0)
         quarentena = st.number_input("Quarentena", min_value=0)
         submit = st.form_submit_button("Registrar")
