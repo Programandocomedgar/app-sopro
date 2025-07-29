@@ -18,7 +18,7 @@ def inicializar_arquivos():
         pd.DataFrame(columns=['Data', 'Turno', 'Operador', 'Máquina', 'Código',
                               'ML', 'Cor', 'Gr', 'Quantidade', 'Tipo']).to_csv(ENTRADA_CSV, index=False)
     if not os.path.exists(SAIDA_CSV):
-        pd.DataFrame(columns=['Data', 'Operador', 'Código', 'ML', 'Produção',
+        pd.DataFrame(columns=['Data', 'Operador', 'Código', 'ML', 'Retirada',
                               'Perdas', 'Quarentena']).to_csv(SAIDA_CSV, index=False)
 
 inicializar_arquivos()
